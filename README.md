@@ -1,2 +1,3 @@
-# teknologihuset
-New webpages for Teknologihuset
+# Teknologihuset Web
+
+This repo will host updated webpages for Teknologihuset.
