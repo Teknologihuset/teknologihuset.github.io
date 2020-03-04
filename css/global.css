@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Fonts */
+
+p{
+	font-size: 1.6rem;
+}
+
+#contentWrapper{
+	position:relative;
+	width: 950px;
+	max-width:100%;
+}
+
+
+.floor2{
+	background: url(th-2nd_0.jpg) no-repeat;
+}
+
+.floor3{
+	background: url(th-3rd_0.jpg) no-repeat;
+}
+
+
+
+/*a[id^="floor"]{
+	display: none;
+}*/
+
+/*
+.floor3{
+	display:block;
+}
+
+.floor2:target{
+	display:block;
+}
+
+.floor3:target{
+	display:block;
+}
+*/
+
+.floor3, #f3_r1, #f3_r2, #f3_r3{
+	z-index: 2;
+}
+
+.floor2 .txt60, .floor3 .txt60{
+	margin-top: -100px;
+	z-index: 6;
+}
+
+.floor2 h1, .floor3 h1, .floor2 h2, .floor3 h2, .floor2 h3, .floor3 h3, .floor2 p, .floor3 p{
+	position: relative;
+}
+
+#f2_r1 img, #f2_r2 img, #f2_r3 img, #f3_r0 img, #f3_r1 img, #f3_r2 img, #f3_r3 img{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#f2_r1, #f2_r2, #f2_r3, #f3_r0, #f3_r1, #f3_r2, #f3_r3{
+	display:none;
+}
+
+
+
+#f2_r1:target, #f2_r2:target, #f2_r3:target, #f3_r0:target, #f3_r1:target, #f3_r2:target, #f3_r3:target{
+	display: block;
+}
+
+
+.floor2 img, .floor3 img{
+	width: 950px;
+	width: 100%;
+}
+
+
+
+.floorNav{
+	z-index:4;
+	position:absolute;
+	top: 0;
+	left: 0;
+}
+
+.floor-chooser{
+	z-index:5;
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	margin-top: 50px;
+}
+
+
+
+.map{
+	border: 3px solid #ff0000;
+}
