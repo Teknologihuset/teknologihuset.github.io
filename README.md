@@ -11,4 +11,4 @@ Open a terminal and run a http-server:
 python -m SimpleHTTPServer
 ```
 
-Open your browser: (http://localhost:8000/)[http://localhost:8000/]
+Open your browser: http://localhost:8000/
