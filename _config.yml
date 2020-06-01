@@ -5,8 +5,6 @@ bio: Teknologihuset
 # twitter summary info
 description: Homepage of Teknologihuset
 
-picture: assets/images/profile.jpg
-
 url: https://javabin.github.io/teknologihuset
 timezone: Europe/Oslo
 
@@ -53,21 +51,15 @@ disqus: false
 # facebook: teknologihuset
 twitteruser: teknologihuset
 instagram: teknologihuset
-# pinterest: mypinterest
 linkedin: teknologihuset
+github: teknologihuset
+email: vert@teknologihuset.no
+# pinterest: mypinterest
 # youtube: myyoutube
 # spotify: myspotify
-github: teknologihuset
 # medium: medium
-#vimeo: teknologihuset
-email: vert@teknologihuset.no
+# vimeo: teknologihuset
 
-authors:
-    dervism:
-        name: Dervis Mansuroglu
-        bio: Developer, Community Lead and Meetup Organizer.
-        picture: assets/images/dervis.jpg
-        twitter: dervis_m
 
 # if you don't need pagination, comment the *paginate* configs below
 # paginate: 5
@@ -75,15 +67,6 @@ authors:
 
 about: true
 blog: true
-
-# do you want to show the "read time" of the posts?
-read-time: true
-
-# do you want to show the "tags" inside the posts?
-show-tags: true
-
-# related posts inside a post?
-related: true
 
 # show next & prev links in blog post?
 blog-nav-links: true
