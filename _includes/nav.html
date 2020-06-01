@@ -1,0 +1,124 @@
+
+<div id="ember600" class="ember-view"><div id="headerArea">
+    <div class="pageContent">
+        <div class="row mobile-menu">
+            <div class="col-xs-2">
+                <a id="mobile-menu-button" href="#sidr"><i class="fa fa-bars"></i></a>
+            </div>
+            <div class="col-xs-8 text-center">
+                <a id="ember636" class="ember-view active" href="#/">
+                  <a href="{{ site.url }}">
+                    <img class="mobile-header-image" src="{{ site.url }}/assets/uploads/th_symbol.png">
+                  </a>
+                </a>
+            </div>
+
+            <!--div class="col-xs-2 text-right">
+                <a id="ember637" class="ember-view shopping-cart-button" href="#/booking">
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
+            </div-->
+        </div>
+
+
+        <nav id="menu" class="topNav" role="navigation">
+            <li id="ember638" class="ember-view uppercase menuPunkt active">
+              <a href="{{ site.url }}">
+                <img src="{{ site.url }}/assets/uploads/th_header_logo.png" class="headerLogo">
+              </a>
+
+            </li>
+            <ul class="toppmeny">
+
+                    <!--li class="menu-text-link">
+
+                            <a id="ember686" class="ember-view menuLink" href="#/booking">Booking</a>
+
+
+                    </li-->
+
+                    <li class="menu-text-link">
+
+                      {% if page.title == "Partnere" %}
+                          <a id="ember690" class="ember-view menuLink active" href="/partnere">Partner</a>
+                      {% else %}
+                        <a id="ember690" class="ember-view menuLink" href="/partnere">Partner</a>
+                      {% endif %}
+
+
+
+                    </li>
+
+                    <li class="menu-text-link">
+
+                            {% if page.title == "Community" %}
+                                <a id="ember708" class="ember-view menuLink active" href="/community">Community</a>
+                            {% else %}
+                              <a id="ember708" class="ember-view menuLink" href="/community">Community</a>
+                            {% endif %}
+
+                    </li>
+
+                    <li class="menu-text-link">
+
+                            {% if page.title == "Vi Tilbyr" %}
+                                <a id="ember724" class="ember-view menuLink active" href="/vitilbyr">Vi Tilbyr</a>
+                            {% else %}
+                              <a id="ember724" class="ember-view menuLink" href="/vitilbyr">Vi Tilbyr</a>
+                            {% endif %}
+
+                    </li>
+
+                    <li class="menu-text-link">
+
+                            {% if page.pageid == "OmHuset" %}
+                                <a id="ember753" class="ember-view menuLink active" href="/omhuset">Om huset</a>
+                            {% else %}
+                              <a id="ember753" class="ember-view menuLink" href="/omhuset">Om huset</a>
+                            {% endif %}
+
+                    </li>
+
+            </ul>
+        </nav>
+
+        <div id="sidr" class="sidr left">
+            <ul class="mobile-menu">
+
+                    <!--li class="mobile-menu-link">
+
+                            <a id="ember772" class="ember-view mobile-menuLink" href="#/booking">Booking</a>
+
+
+                    </li-->
+
+                    <li class="mobile-menu-link">
+
+                            <a id="ember776" class="ember-view mobile-menuLink" href="#/partnere">Partner</a>
+
+
+                    </li>
+
+                    <li class="mobile-menu-link">
+                            <a id="ember780" class="ember-view mobile-menuLink" href="#/community">Community</a>
+
+                    </li>
+
+                    <li class="mobile-menu-link">
+
+                            <a id="ember784" class="ember-view mobile-menuLink" href="#/viTilbyr/2ndFloor">Vi Tilbyr</a>
+
+
+                    </li>
+
+                    <li class="mobile-menu-link">
+
+                            <a id="ember788" class="ember-view mobile-menuLink" href="#/pages/om">Om huset</a>
+
+
+                    </li>
+
+            </ul>
+        </div>
+    </div>
+</div></div>
