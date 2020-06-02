@@ -5,8 +5,7 @@ bio: Teknologihuset
 # twitter summary info
 description: Homepage of Teknologihuset
 
-url: https://javabin.github.io
-baseurl: /teknologihuset
+url: https://javabin.github.io/teknologihuset
 timezone: Europe/Oslo
 
 permalink: /:title/
