@@ -24,3 +24,5 @@ yarn-error.log*
 
 .jekyll-cache
 _site
+
+.idea
