@@ -4,18 +4,19 @@ This repo will host updated webpages for Teknologihuset.
 
 ## How to setup:
 
-1. Open a terminal/command line window
-2. `gem install bundler jekyll`
-3. Build the project: `bundler install`
-3. Make sure you have Node and NPM installed: `npm -v` and `node -v` (you should see a version number)
+1. Open a terminal window
+2. Install Bundler and Jekyll: `gem install bundler jekyll`
+3. Install project dependencies: `bundler install`
+4. Make sure you Node & NPM installed: `npm -v`
+5. Build the project: `npm run build`
 
 
 ## How to test:
 
-Open a terminal and run a http-server:
+Open a terminal and run the following command:
 
 ```
-python -m SimpleHTTPServer
+npm run serve
 ```
 
-Open your browser: http://localhost:8000/
+Open your browser: http://localhost:4000/

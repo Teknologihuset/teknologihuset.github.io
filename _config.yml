@@ -5,7 +5,8 @@ bio: Teknologihuset
 # twitter summary info
 description: Homepage of Teknologihuset
 
-url: https://javabin.github.io/teknologihuset
+url: https://javabin.github.io
+baseurl: /teknologihuset
 timezone: Europe/Oslo
 
 permalink: /:title/
@@ -24,12 +25,8 @@ defaults:
       path: ""
       type: "pages"
     values:
-      picture: assets/images/someimage.jpg
       heading: "Teknologihuset"
       subheading: "House of Communities"
-      bio: ""
-      social: true
-      animation: true
   -
    scope:
      path: ""
