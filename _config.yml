@@ -5,7 +5,7 @@ bio: Teknologihuset
 # twitter summary info
 description: Homepage of Teknologihuset
 
-url: https://www.teknologihuset.no/
+url: https://www.teknologihuset.no
 timezone: Europe/Oslo
 
 permalink: /:title/
