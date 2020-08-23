@@ -16,8 +16,9 @@ body {
     position: relative;
 }
 
-
-
+/*TODO: STYLE PÅ HOVER/CLICK*/
+map area:hover {
+}
 
 h1 {
     font-family: 'Open Sans', Arial, sans-serif;

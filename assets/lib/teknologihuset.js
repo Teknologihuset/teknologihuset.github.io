@@ -3,6 +3,8 @@ Date.prototype.getWeek = function() {
     return Math.ceil((((this - onejan) / 86400000) + onejan.getDay()+1)/7);
 };
 
+console.log("####");
+
 moment.locale('nb');
 
 var Teknologihuset = Ember.Application.create({
@@ -1382,6 +1384,8 @@ Teknologihuset.ViTilbyr3rdFloorInnsiktRoute = Ember.Route.extend({
 });
 Teknologihuset.ViTilbyr3rdFloorInnsiktView = Ember.View.extend({
     didInsertElement: function() {
+        console.log("TESTING 1");
+
         this._super();
         Ember.run.schedule('afterRender', function() {
             $('map').imageMapResize();
@@ -1390,12 +1394,13 @@ Teknologihuset.ViTilbyr3rdFloorInnsiktView = Ember.View.extend({
 });
 Teknologihuset.ViTilbyr3rdFloorInspirasjonRoute = Ember.Route.extend({
     model: function() {
-        console.log("TESTING");
+        console.log("TESTING 2");
         return this.store.find('room', 'Big Conference Room');
     }
 });
 Teknologihuset.ViTilbyr3rdFloorInspirasjonView = Ember.View.extend({
     didInsertElement: function() {
+        console.log("TESTING 3");
         Ember.run.schedule('afterRender', function() {
             $('map').imageMapResize();
         });
@@ -1403,6 +1408,7 @@ Teknologihuset.ViTilbyr3rdFloorInspirasjonView = Ember.View.extend({
 });
 Teknologihuset.ViTilbyrRoute = Ember.Route.extend({
     model: function() {
+        console.log("TESTING 4");
         return Ember.RSVP.hash({
             viTilbyr: this.store.find('page', 'viTilbyr')
         });
