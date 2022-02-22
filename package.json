@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d dist",
+    "deploy": "gh-pages -b gh-pages -d dist",
     "prettier": "prettier --write index.html package.json \"src/**/*.{js,jsx,ts,tsx,css,json,svg}\""
   },
   "lint-staged": {
