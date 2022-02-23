@@ -32,6 +32,7 @@ jobs:
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.6.0
         with:
+          repo: Teknologihuset/teknologihuset.github.io
           target_branch: gh-pages
           build_dir: dist
           jekyll: false
