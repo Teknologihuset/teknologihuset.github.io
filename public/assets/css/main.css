@@ -2979,10 +2979,10 @@ input, select, textarea {
 		.wrapper.style3 {
 			background-color: #565656;
 			color: #ffffff;
-			background-image: -moz-linear-gradient(to top, rgba(86, 86, 86, 0.7), rgba(86, 86, 86, 0.7)), url("public/assets/imagess/images/pic05.jpg");
-			background-image: -webkit-linear-gradient(to top, rgba(86, 86, 86, 0.7), rgba(86, 86, 86, 0.7)), url("public/assets/imagess/images/pic05.jpg");
-			background-image: -ms-linear-gradient(to top, rgba(86, 86, 86, 0.7), rgba(86, 86, 86, 0.7)), url("public/assets/imagess/images/pic05.jpg");
-			background-image: linear-gradient(to top, rgba(86, 86, 86, 0.7), rgba(86, 86, 86, 0.7)), url("public/assets/imagess/images/pic05.jpg");
+			background-image: -moz-linear-gradient(to top, rgba(86, 86, 86, 0.7), rgba(86, 86, 86, 0.7)), url("../../images/pic05.jpg");
+			background-image: -webkit-linear-gradient(to top, rgba(86, 86, 86, 0.7), rgba(86, 86, 86, 0.7)), url("../../images/pic05.jpg");
+			background-image: -ms-linear-gradient(to top, rgba(86, 86, 86, 0.7), rgba(86, 86, 86, 0.7)), url("../../images/pic05.jpg");
+			background-image: linear-gradient(to top, rgba(86, 86, 86, 0.7), rgba(86, 86, 86, 0.7)), url("../../images/pic05.jpg");
 			background-size: cover, cover;
 			background-position: center, center;
 			background-repeat: repeat, no-repeat;

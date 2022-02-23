@@ -7,7 +7,7 @@ function App() {
       <div id="wrapper">
         <section id="intro" className="wrapper featured style1">
           <div className="inner">
-            <span className="image"><img src="images/pic01.jpg" alt=""/></span>
+            <span className="image"><img src="/images/pic01.jpg" alt=""/></span>
             <div className="content">
               <header>
                 <h1>Teknologihuset Rebel</h1>
@@ -62,7 +62,7 @@ function App() {
                 litora torquent et conubia etiam nostra.</p>
             </header>
             <section className="spotlight">
-              <span className="image"><img src="images/pic02.jpg" alt=""/></span>
+              <span className="image"><img src="/images/pic02.jpg" alt=""/></span>
               <div className="content">
                 <header>
                   <h3>Aliquam veroeros</h3>
@@ -78,7 +78,7 @@ function App() {
               </div>
             </section>
             <section className="spotlight">
-              <span className="image"><img src="images/pic03.jpg" alt=""/></span>
+              <span className="image"><img src="/images/pic03.jpg" alt=""/></span>
               <div className="content">
                 <header>
                   <h3>Nostra adpiscing</h3>
@@ -94,7 +94,7 @@ function App() {
               </div>
             </section>
             <section className="spotlight">
-              <span className="image"><img src="images/pic04.jpg" alt=""/></span>
+              <span className="image"><img src="/images/pic04.jpg" alt=""/></span>
               <div className="content">
                 <header>
                   <h3>Tempus litoria</h3>
