@@ -37,6 +37,10 @@
 			background-repeat:		repeat, no-repeat;
 			background-attachment:	fixed;
 
+			@include breakpoint('<=medium') {
+				background-attachment: scroll;
+			}
+
 			> .inner {
 				&.split {
 					@include breakpoint('<=medium') {
