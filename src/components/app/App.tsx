@@ -11,7 +11,7 @@ function App() {
             <div className="content">
               <header>
                 <h1>Teknologihuset Rebel</h1>
-                <p>Huset med IT-folk i sentrum.</p>
+                <p>Huset med IT-folk i sentrum</p>
               </header>
               <footer>
                 <ul className="actions">
@@ -57,15 +57,14 @@ function App() {
         <section className="wrapper style1 special">
           <div className="inner">
             <header>
-              <h2>Duis torquent</h2>
-              <p>Rutrum facilisis. Class aptent taciti sociosqu<br/>
-                litora torquent et conubia etiam nostra.</p>
+              <h2>Rebel // Teknologihuset</h2>
+              <p>Bli kjent med Teknologihuset på Rebel</p>
             </header>
             <section className="spotlight">
-              <span className="image"><img src="/images/pic02.jpg" alt=""/></span>
+              <span className="image"><img src="/images/partnere.jpeg" alt=""/></span>
               <div className="content">
                 <header>
-                  <h3>Aliquam veroeros</h3>
+                  <h3>Teknologihusets partnere</h3>
                 </header>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent
                   taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos magna fames ac turpis
@@ -78,10 +77,10 @@ function App() {
               </div>
             </section>
             <section className="spotlight">
-              <span className="image"><img src="/images/pic03.jpg" alt=""/></span>
+              <span className="image"><img src="/images/resepsjon.jpeg" alt=""/></span>
               <div className="content">
                 <header>
-                  <h3>Nostra adpiscing</h3>
+                  <h3>Rebel-bygget</h3>
                 </header>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent
                   taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos magna fames ac turpis
@@ -94,10 +93,10 @@ function App() {
               </div>
             </section>
             <section className="spotlight">
-              <span className="image"><img src="/images/pic04.jpg" alt=""/></span>
+              <span className="image"><img src="/images/trapp.jpeg" alt=""/></span>
               <div className="content">
                 <header>
-                  <h3>Tempus litoria</h3>
+                  <h3>Fasiliteter</h3>
                 </header>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent
                   taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos magna fames ac turpis
@@ -115,7 +114,7 @@ function App() {
               per conubia nostra, per inceptos himenaeos. Etiam tristique eu nibh.</p>
             <footer>
               <ul className="actions special">
-                <li><a href="#" className="button">Details</a></li>
+                <li><a href="#" className="button">Les mer</a></li>
               </ul>
             </footer>
           </div>
@@ -124,14 +123,14 @@ function App() {
         <section className="wrapper style3 special">
           <div className="inner">
             <header>
-              <h2>Amet ullamcorper</h2>
+              <h2>Communities</h2>
               <p>Aptent taciti sociosqu litora torquent et conubia sed etiam.<br/>
                 Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam<br/>
                 turpis mauris, ultricies erat malesuada quis.</p>
             </header>
             <footer>
               <ul className="actions special">
-                <li><a href="#" className="button big">Get Started</a></li>
+                <li><a href="#" className="button big">Les mer</a></li>
               </ul>
             </footer>
           </div>
@@ -141,7 +140,7 @@ function App() {
           <div className="inner">
             <section>
               <header>
-                <h3>Magna lorem ipsum</h3>
+                <h3>Kontakt Teknologihuset</h3>
               </header>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent
                 taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos magna fames ac turpis
@@ -157,14 +156,14 @@ function App() {
             <section>
               <form method="post" action="#">
                 <div className="fields">
-                  <div className="field half"><input type="text" name="name" id="name" placeholder="Name"/></div>
-                  <div className="field half"><input type="email" name="email" id="email" placeholder="Email"/></div>
+                  <div className="field half"><input type="text" name="name" id="name" placeholder="Navn"/></div>
+                  <div className="field half"><input type="email" name="email" id="email" placeholder="E-post"/></div>
                   <div className="field">
-                    <textarea name="message" id="message" placeholder="Message" rows={4} />
+                    <textarea name="message" id="message" placeholder="Melding" rows={4} />
                   </div>
                 </div>
                 <ul className="actions">
-                  <li><input type="submit" value="Send Message"/></li>
+                  <li><input type="submit" value="Send melding"/></li>
                 </ul>
               </form>
             </section>

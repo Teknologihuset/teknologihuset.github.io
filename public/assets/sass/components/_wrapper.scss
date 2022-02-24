@@ -59,7 +59,7 @@
 			background-repeat:		repeat, no-repeat;
 			background-attachment:	fixed;
 
-			height: 100vh;
+
 
 			> .inner {
 				&.split {
@@ -89,7 +89,6 @@
 					width: 21em;
 
 					img {
-						border-radius: 100%;
 						width: 100%;
 					}
 				}
@@ -112,6 +111,9 @@
 				@include breakpoint('<=large') {
 					padding: 0;
 
+					margin: 0 auto;
+					height: 50vh;
+
 					> .content {
 						h1 {
 							font-size: 3.5em;
@@ -126,6 +128,9 @@
 				@include breakpoint('<=medium') {
 					display: block;
 					text-align: center;
+
+					margin: 0 auto;
+					height: 50vh;
 
 					> .image {
 						margin: 0 auto (_size(element-margin) * 1.5) auto;
