@@ -1,10 +1,10 @@
-@import 'public/assets/assets/sass/libs/vars';
-@import 'public/assets/assets/sass/libs/functions';
-@import 'public/assets/assets/sass/libs/mixins';
-@import 'public/assets/assets/sass/libs/vendor';
-@import 'public/assets/assets/sass/libs/breakpoints';
-@import 'public/assets/assets/sass/libs/html-grid';
-@import 'fontawesome-all.min.css';
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'libs/html-grid';
+@import '../css/fontawesome-all.min.css';
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,300italic,500,500italic');
 
 /*
@@ -38,29 +38,29 @@
 
 // Base.
 
-	@import 'public/assets/assets/sass/base/reset';
-	@import 'public/assets/assets/sass/base/page';
-	@import 'public/assets/assets/sass/base/typography';
+	@import 'base/reset';
+	@import 'base/page';
+	@import 'base/typography';
 
 // Component.
 
-	@import 'public/assets/assets/sass/components/row';
-	@import 'public/assets/assets/sass/components/box';
-	@import 'public/assets/assets/sass/components/button';
-	@import 'public/assets/assets/sass/components/form';
-	@import 'public/assets/assets/sass/components/icon';
-	@import 'public/assets/assets/sass/components/image';
-	@import 'public/assets/assets/sass/components/list';
-	@import 'public/assets/assets/sass/components/actions';
-	@import 'public/assets/assets/sass/components/icons';
-	@import 'public/assets/assets/sass/components/section';
-	@import 'public/assets/assets/sass/components/table';
-	@import 'public/assets/assets/sass/components/spotlight';
-	@import 'public/assets/assets/sass/components/wrapper';
+	@import 'components/row';
+	@import 'components/box';
+	@import 'components/button';
+	@import 'components/form';
+	@import 'components/icon';
+	@import 'components/image';
+	@import 'components/list';
+	@import 'components/actions';
+	@import 'components/icons';
+	@import 'components/section';
+	@import 'components/table';
+	@import 'components/spotlight';
+	@import 'components/wrapper';
 
 // Layout.
 
-	@import 'public/assets/assets/sass/layout/header';
-	@import 'public/assets/assets/sass/layout/menu';
-	@import 'public/assets/assets/sass/layout/footer';
-	@import 'public/assets/assets/sass/layout/intro';
+	@import 'layout/header';
+	@import 'layout/menu';
+	@import 'layout/footer';
+	@import 'layout/intro';

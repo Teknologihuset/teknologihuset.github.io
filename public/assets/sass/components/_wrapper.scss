@@ -30,12 +30,36 @@
 			@include color('invert');
 			@include vendor('background-image', (
 				'linear-gradient(to top, #{transparentize(_palette(invert, bg), 0.3)}, #{transparentize(_palette(invert, bg), 0.3)})',
-				'url("../../images/pic05.jpg")'
+				'url("/images/biljardbord.jpeg")'
 			));
 			background-size:		cover, cover;
 			background-position:	center, center;
 			background-repeat:		repeat, no-repeat;
 			background-attachment:	fixed;
+
+			> .inner {
+				&.split {
+					@include breakpoint('<=medium') {
+						> :first-child {
+							border-bottom-color: _palette(invert, border-alt);
+						}
+					}
+				}
+			}
+		}
+
+		&.style4 {
+			@include color('invert');
+			@include vendor('background-image', (
+							'linear-gradient(to top, #{transparentize(_palette(invert, bg), 0.3)}, #{transparentize(_palette(invert, bg), 0.3)})',
+							'url("/images/atrium.png")'
+			));
+			background-size:		cover, cover;
+			background-position:	center, center;
+			background-repeat:		repeat, no-repeat;
+			background-attachment:	fixed;
+
+			height: 100vh;
 
 			> .inner {
 				&.split {

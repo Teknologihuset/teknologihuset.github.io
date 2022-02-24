@@ -5,9 +5,9 @@ function App() {
 
   return (
       <div id="wrapper">
-        <section id="intro" className="wrapper featured style1">
+        <section id="intro" className="wrapper featured style4">
           <div className="inner">
-            <span className="image"><img src="/images/pic01.jpg" alt=""/></span>
+            <span className="image"><img src="/images/logo.png" alt=""/></span>
             <div className="content">
               <header>
                 <h1>Teknologihuset Rebel</h1>
@@ -15,7 +15,7 @@ function App() {
               </header>
               <footer>
                 <ul className="actions">
-                  <li><a href="#" className="button big">Get Started</a></li>
+                  <li><a href="#" className="button big">Les mer</a></li>
                 </ul>
               </footer>
             </div>
@@ -26,7 +26,7 @@ function App() {
           <div className="inner">
             <header>
               <h2>Teknologihuset Rebel - House of Communities</h2>
-              <p>Topp moderne møteplass for communitymiljøet på kveldstid. Muliggjort av Norges ledende IT-bedrifter.
+              <p>Toppmoderne møteplass for communitymiljøet på kveldstid. Muliggjort av Norges ledende IT-bedrifter.
 
                 Bookingløsningen er under arbeid. For booking av rom, kontakt oss på:
                 vert@teknologihuset.no.</p>
