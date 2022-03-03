@@ -46,7 +46,7 @@
 			}
 		}
 
-		&:nth-of-type(2n) {
+		&.txt-align-right {
 			@include vendor('flex-direction', 'row');
 
 			.image {
@@ -55,6 +55,18 @@
 
 			.content {
 				margin: 0 0 0 _size(element-margin);
+			}
+
+			@include breakpoint('<=large') {
+				&:nth-of-type(2n) {
+					.image {
+						margin: 0 (_size(element-margin) * 0.75) 0 0;
+					}
+
+					.content {
+						margin: 0 0 0 (_size(element-margin) * 0.75);
+					}
+				}
 			}
 		}
 
@@ -65,16 +77,6 @@
 
 			.content {
 				margin: 0 (_size(element-margin) * 0.75) 0 0;
-			}
-
-			&:nth-of-type(2n) {
-				.image {
-					margin: 0 (_size(element-margin) * 0.75) 0 0;
-				}
-
-				.content {
-					margin: 0 0 0 (_size(element-margin) * 0.75);
-				}
 			}
 		}
 

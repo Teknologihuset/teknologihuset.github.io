@@ -6,6 +6,8 @@
 
 /* Button */
 
+@use "sass:math";
+
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
@@ -22,10 +24,10 @@
 		display: inline-block;
 		font-weight: _font(weight-bold);
 		font-size: 0.7em;
-		height: (3em / 0.7);
-		line-height: (3em / 0.7);
-		border-radius: (3em / 0.7);
-		padding: 0 (2em / 0.7);
+		height: math.div(3em, 0.7);
+		line-height: math.div(3em, 0.7);
+		border-radius: math.div(3em, 0.7);
+		padding: 0 math.div(2em, 0.7);
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
@@ -48,18 +50,18 @@
 
 		&.large {
 			font-size: 0.85em;
-			height: (2.75em / 0.7);
-			line-height: (2.75em / 0.7);
-			border-radius: (2.75em / 0.7);
-			padding: 0 (1.75em / 0.7);
+			height: math.div(2.75em, 0.7);
+			line-height: math.div(2.75em, 0.7);
+			border-radius: math.div(2.75em, 0.7);
+			padding: 0 math.div(1.75em, 0.7);
 		}
 
 		&.small {
 			font-size: 0.6em;
-			height: (2.25em / 0.6);
-			line-height: (2.25em / 0.6);
-			border-radius: (2.25em / 0.6);
-			padding: 0 (1.5em / 0.6);
+			height: math.div(2.25em, 0.6);
+			line-height: math.div(2.25em, 0.6);
+			border-radius: math.div(2.25em, 0.6);
+			padding: 0 math.div(1.5em, 0.6);
 		}
 
 		&.disabled,

@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './components/app/App'
+import FrontPage from './pages/frontpage/FrontPage'
 
 import '../public/assets/sass/main.scss'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <FrontPage />
   </React.StrictMode>,
   document.getElementById('root')
 )
