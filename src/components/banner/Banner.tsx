@@ -6,7 +6,7 @@ function Banner() {
                 <span className="image"><img src="/images/logo.png" alt=""/></span>
                 <div className="content">
                     <header>
-                        <h1>Teknologihuset Rebel</h1>
+                        <h1>Teknologihuset</h1>
                         <p>Huset med IT-folk i sentrum</p>
                     </header>
                     <footer>
