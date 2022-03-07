@@ -7,8 +7,8 @@ export interface Client {
     imageUrlFor: (source: string) => ImageUrlBuilder;
 }
 
-const projectId = process.env.SANITY_STUDIO_API_PROJECT_ID || undefined
-const dataset = process.env.SANITY_STUDIO_API_DATASET || undefined
+const projectId: string = import.meta.env.SANITY_STUDIO_API_PROJECT_ID as string
+const dataset: string = import.meta.env.SANITY_STUDIO_API_DATASET as string
 
 if (!projectId) throw new Error("ProjectId has not been defined.");
 if (!dataset) throw new Error("Dataset has not been defined.");
