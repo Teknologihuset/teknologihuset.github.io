@@ -1,0 +1,36 @@
+{
+  "root": true,
+  "project": {
+    "name": "teknologihuset-web"
+  },
+  "api": {
+    "projectId": "q7ujq3cx",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ],
+      "api": {
+        "dataset": "development"
+      }
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./sanity-structure.js"
+    }
+  ]
+}
