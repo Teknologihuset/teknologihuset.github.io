@@ -14,7 +14,7 @@ function FrontPage() {
         <section className="wrapper style2 special">
           <div className="inner">
             <Header
-                text="Teknologihuset Rebel - House of Communities"
+                text="Teknologihuset - House of Communities"
                 body={`
                   Toppmoderne møteplass for communitymiljøet på kveldstid. Muliggjort av Norges ledende IT-bedrifter.
 
