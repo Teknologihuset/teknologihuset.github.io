@@ -4,8 +4,10 @@ import {useQuery} from "react-query";
 function Banner() {
 
     const query = `
-      *[ _type == 'texts_frontpage' ] { frontpage_header, frontpage_subheader, frontpage_action_btn_label }
+      *[ _type == 'texts_frontpage' ] { frontpage_header, frontpage_subheader, frontpage_action_btn_label, frontpage_header_logo }
     `;
+
+    const getLogo = (image: string) => th.imageUrl(image);
 
     const { data: bannerContent } = useQuery('bannerContentList',
         () => th.sanity()
@@ -17,12 +19,10 @@ function Banner() {
         return <h1>Loading…</h1>;
     }
 
-    console.log("bannerContent", bannerContent)
-
     return (
         <section id="intro" className="wrapper featured style4">
             <div className="inner">
-                <span className="image"><img src="/images/logo.png" alt=""/></span>
+                <span className="image"><img src={getLogo(bannerContent.frontpage_header_logo)} alt="Teknologihuset logo"/></span>
                 <div className="content">
                     <header>
                         <h1>{bannerContent.frontpage_header}</h1>
