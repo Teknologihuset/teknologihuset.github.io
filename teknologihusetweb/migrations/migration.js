@@ -31,8 +31,8 @@ class Migration {
     }
 
     static createPatches = (patch, docs) => {
-        const hasId = (doc) => !doc._id ? throw new Error("Document doesn't have an id property.") : doc._id;
-        const hasRev = (doc) => !doc._rev ? throw new Error("Document doesn't have a revision property.") : doc._rev;
+        const hasId = (doc) => doc._id ?? throw new Error("Document doesn't have an id property.");
+        const hasRev = (doc) => doc._rev ?? throw new Error("Document doesn't have a revision property.");
 
         return docs.map((doc) => {
             hasId(doc);

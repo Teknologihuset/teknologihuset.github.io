@@ -1,10 +1,10 @@
 import sanityClient, {SanityClient} from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
-import {ImageUrlBuilder} from "@sanity/image-url/lib/types/builder";
 
 export interface Client {
     sanity: () => SanityClient;
-    imageUrlFor: (source: string) => ImageUrlBuilder;
+    imageUrl: (source: string) => string;
+    imageUrlWithSize: (source: string, width: number, height: number) => string;
 }
 
 const projectId: string = import.meta.env.SANITY_STUDIO_API_PROJECT_ID as string
@@ -24,7 +24,8 @@ const builder = imageUrlBuilder(sanityClientTeknologihuset);
 
 const th : Client = {
     sanity: (): SanityClient => sanityClientTeknologihuset,
-    imageUrlFor: (source: string): ImageUrlBuilder => builder.image(source).auto('format')
+    imageUrl: (source: string): string => builder.image(source).auto('format').url(),
+    imageUrlWithSize: (source: string, width: number, height: number): string => builder.width(width). height(height).image(source).url()
 }
 
 export default th
