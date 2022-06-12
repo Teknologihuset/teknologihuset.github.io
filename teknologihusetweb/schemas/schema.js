@@ -7,10 +7,8 @@ import menu from "./menu";
 import menuElement from "./menu-element";
 import page from "./page";
 import section from "./section";
-import partner from "./partner";
-import partnerElement from "./partner-element";
 import frontpage from "./texts/frontpage";
-import partners from "./partners";
+import partner from "./partners";
 
 export default createSchema({
   name: 'default',
@@ -19,9 +17,7 @@ export default createSchema({
       menu,
       page,
       //section,
-      partnerElement,
       partner,
-      partners,
       frontpage
   ]),
 })

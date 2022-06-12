@@ -17,13 +17,6 @@ export default () =>
                             .documentId("menu")
                     ),
                 S.listItem()
-                    .title("Partnere")
-                    .child(
-                        S.editor()
-                            .schemaType("partnere")
-                            .documentId("partnere")
-                    ),
-                S.listItem()
                     .title("Tekster")
                     .child(
                         S.list()

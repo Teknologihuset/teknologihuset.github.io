@@ -1,6 +1,6 @@
 
 export default {
-    name: "partnerlist",
+    name: "partner",
     title: "Partnere",
     type: "document",
     __experimental_actions: ['create', 'update', 'delete', 'publish'],
