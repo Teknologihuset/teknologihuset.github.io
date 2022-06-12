@@ -7,11 +7,31 @@
     "projectId": "q7ujq3cx",
     "dataset": "production"
   },
+  "__experimental_spaces": [
+    {
+      "name": "production",
+      "title": "Prod",
+      "default": true,
+      "api": {
+        "projectId": "q7ujq3cx",
+        "dataset": "production"
+      }
+    },
+    {
+      "name": "development",
+      "title": "Development",
+      "api": {
+        "projectId": "q7ujq3cx",
+        "dataset": "development"
+      }
+    }
+  ],
   "plugins": [
     "@sanity/base",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool"
+    "@sanity/desk-tool",
+    "@sanity/cross-dataset-duplicator"
   ],
   "env": {
     "development": {
