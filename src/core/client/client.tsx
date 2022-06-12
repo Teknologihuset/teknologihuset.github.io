@@ -16,17 +16,15 @@ if (!dataset) throw new Error("Dataset has not been defined.");
 const sanityClientTeknologihuset = sanityClient({
     projectId,
     dataset,
+    apiVersion: '2022-06-11',
+    useCdn: true
 });
 
 const builder = imageUrlBuilder(sanityClientTeknologihuset);
 
-const TeknologihusetClient: Client = {
-    sanity: function (): SanityClient {
-        return sanityClientTeknologihuset;
-    },
-    imageUrlFor: function (source: string): ImageUrlBuilder {
-        return builder.image(source);
-    }
+const th : Client = {
+    sanity: (): SanityClient => sanityClientTeknologihuset,
+    imageUrlFor: (source: string): ImageUrlBuilder => builder.image(source).auto('format')
 }
 
-export default TeknologihusetClient
+export default th
