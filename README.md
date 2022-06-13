@@ -16,4 +16,4 @@ Open a terminal and run the following command:
 npm run serve
 ```
 
-Open your browser: http://localhost:4000/
+Open your browser: http://localhost:3000/
