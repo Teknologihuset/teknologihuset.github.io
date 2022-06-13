@@ -1,10 +1,11 @@
 import th from "../../core/client/client";
 import {useQuery} from "react-query";
+import Loader from "../loader/Loader";
 
 function Banner() {
 
     const query = `
-      *[ _type == 'texts_frontpage' ] { frontpage_header, frontpage_subheader, frontpage_action_btn_label, frontpage_header_logo }
+      *[ _type == 'texts_frontpage_banner' ] { frontpage_header, frontpage_subheader, frontpage_action_btn_label, frontpage_header_logo }
     `;
 
     const getLogo = (image: string) => th.imageUrl(image);
@@ -16,7 +17,7 @@ function Banner() {
             .catch(reason => console.error(reason)));
 
     if (!bannerContent) {
-        return <h1>Loading…</h1>;
+        return <Loader />;
     }
 
     return (
