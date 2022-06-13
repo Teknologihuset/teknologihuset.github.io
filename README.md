@@ -1,6 +1,6 @@
 # Teknologihuset Web
 
-This repo will host updated webpages for Teknologihuset.
+This repo host updated webpages for Teknologihuset.
 
 ## How to setup:
 
