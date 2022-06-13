@@ -28,6 +28,10 @@ jobs:
         run: |
           npm install
           npm run build
+        env:
+          SANITY_STUDIO_API_PROJECT_ID: ${{ secrets.SANITY_STUDIO_API_PROJECT_ID }}
+          SANITY_STUDIO_API_DATASET: ${{ secrets.SANITY_STUDIO_API_DATASET }}
+          SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
   
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.6.0
@@ -40,6 +44,3 @@ jobs:
           verbose: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SANITY_STUDIO_API_PROJECT_ID: ${{ secrets.SANITY_STUDIO_API_PROJECT_ID }}
-          SANITY_STUDIO_API_DATASET: ${{ secrets.SANITY_STUDIO_API_DATASET }}
-          SANITY_TOKEN: ${{ secrets.SANITY_TOKEN }}
