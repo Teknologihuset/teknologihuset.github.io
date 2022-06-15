@@ -30,9 +30,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Envs
-        run: env
-
       - name: Build
         run: |
           npm install
