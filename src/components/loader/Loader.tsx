@@ -5,7 +5,7 @@ type LoaderProps = {
 }
 
 const Loader: React.FC<LoaderProps> = (props) => {
-  return <>{getStyle(props.style ?? 4)}</>
+  return getStyle(props.style ?? 4)
 }
 
 function getStyle(style: number) {
