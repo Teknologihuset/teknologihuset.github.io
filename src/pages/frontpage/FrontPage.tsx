@@ -4,7 +4,7 @@ import Header from "../../components/header/Header";
 import Spotlight from "../../components/spotlight/Spotlight";
 import Content from "../../components/content/Content";
 import SpotlightImage from "../../components/image/SpotlightImage";
-import th from "../../core/client/client";
+import th, {getImage} from "../../core/client/client";
 import {useQuery} from "react-query";
 import Loader from "../../components/loader/Loader";
 
@@ -16,6 +16,7 @@ function FrontPage() {
         frontpage_booking_subheader,
         frontpage_booking_description_header, 
         frontpage_booking_description_text, 
+        frontpage_booking_description_logo, 
         frontpage_booking_btn_label,
         frontpage_booking_btn_url,
         frontpage_booking_btn_label_visibility,
@@ -46,7 +47,7 @@ function FrontPage() {
             </Header>
 
             <Spotlight>
-              <SpotlightImage imgSrc="/images/auditorium.jpeg" />
+              <SpotlightImage imgSrc={getImage(frontageContent.frontpage_booking_description_logo, "/images/auditorium.jpeg")} />
               <Content actions={ [ {href: "#", label: frontageContent.frontpage_booking_btn_label} ] }>
                 <Header size={3} title={frontageContent.frontpage_booking_description_header} />
                 <p>{frontageContent.frontpage_booking_description_text}</p>

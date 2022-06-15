@@ -44,6 +44,12 @@ export default {
             initialValue: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis."
         },
         {
+            title: "Logo",
+            name: "frontpage_booking_description_logo",
+            type: "image",
+            validation: Rule => Rule.required(),
+        },
+        {
             title: "Booking - Knapp tittel",
             name: "frontpage_booking_btn_label",
             type: "string",

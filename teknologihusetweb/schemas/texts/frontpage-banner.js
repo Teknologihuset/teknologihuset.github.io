@@ -45,6 +45,6 @@ export default {
             name: "frontpage_header_logo",
             type: "image",
             validation: Rule => Rule.required(),
-        },
+        }
     ]
 }
