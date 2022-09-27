@@ -8,7 +8,9 @@ import menuElement from "./menu-element";
 import page from "./page";
 import section from "./section";
 import texts_frontpage_banner from "./texts/frontpage-banner";
-import texts_frontpage_content from "./texts/frontpage-content";
+import texts_frontpage_section_top from "./texts/frontpage-top";
+import frontpageContentMatrix from "./texts/frontpage-content-matrix";
+import texts_frontpage_spotlight from "./texts/frontpage-spotlight";
 import partner from "./partners";
 
 export default createSchema({
@@ -20,6 +22,8 @@ export default createSchema({
       //section,
       partner,
       texts_frontpage_banner,
-      texts_frontpage_content
+      texts_frontpage_section_top,
+      texts_frontpage_spotlight,
+      frontpageContentMatrix
   ]),
 })

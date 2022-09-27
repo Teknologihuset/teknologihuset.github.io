@@ -1,11 +1,17 @@
 import React from "react";
 
+import "./Loader.css";
+import Header from "../header/Header";
+
 type LoaderProps = {
   style?: number
 }
 
 const Loader: React.FC<LoaderProps> = (props) => {
-  return getStyle(props.style ?? 4)
+  return <section className="wrapper style2 special">
+    <Header size={5} title={"Laster inn..."} />
+    {getStyle(props.style ?? 4)}
+  </section>
 }
 
 function getStyle(style: number) {

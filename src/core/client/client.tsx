@@ -42,5 +42,8 @@ export const getImage = (image: string, defaultImg: string = "") => {
         return defaultImg;
     }
 }
+export const getText = (text: string, defaultText: string = "") => {
+    return text ?? defaultText;
+}
 
 export default th

@@ -4,36 +4,30 @@ import Header from "../../components/header/Header";
 import Spotlight from "../../components/spotlight/Spotlight";
 import Content from "../../components/content/Content";
 import SpotlightImage from "../../components/image/SpotlightImage";
-import th, {getImage} from "../../core/client/client";
+import th, {getImage, getText} from "../../core/client/client";
 import {useQuery} from "react-query";
 import Loader from "../../components/loader/Loader";
+import {Action} from "../../components/content/ActionList";
 
 function FrontPage() {
 
   const query = `
-      *[ _type == 'texts_frontpage_content' ] { 
-        frontpage_booking_header, 
-        frontpage_booking_subheader,
-        frontpage_booking_description_header, 
-        frontpage_booking_description_text, 
-        frontpage_booking_description_logo, 
-        frontpage_booking_btn_label,
-        frontpage_booking_btn_url,
-        frontpage_booking_btn_label_visibility,
-        frontpage_booking_description2,
-        frontpage_booking_btn2_label,
-        frontpage_booking_btn2_label_visibility
+      {
+        "frontpageTop": *[ _type == "texts_frontpage_top"][0],
+        "frontpageMatrix": *[ _type == "texts_frontpage_content_matrix"][0]
       }
     `;
 
-  const { data: frontageContent } = useQuery('frontageContentList',
+  const { data: frontpageContent } = useQuery('frontageContentList',
       () => th.sanity()
           .fetch(query)
-          .then(value => value.pop())
+          .then(value => value)
           .catch(reason => console.error(reason)));
 
-  if (!frontageContent) {
-    return <Loader />
+  if (!frontpageContent) {
+    return <div id="wrapper">
+      <Loader />
+    </div>
   }
 
   return (
@@ -42,23 +36,23 @@ function FrontPage() {
 
         <section className="wrapper style2 special">
           <div className="inner">
-            <Header title={frontageContent.frontpage_booking_header}>
-              {frontageContent.frontpage_booking_subheader}
+            <Header title={frontpageContent.frontpageTop.frontpage_booking_header}>
+              {frontpageContent.frontpage_booking_subheader}
             </Header>
 
             <Spotlight>
-              <SpotlightImage imgSrc={getImage(frontageContent.frontpage_booking_description_logo, "/images/auditorium.jpeg")} />
-              <Content actions={ [ {href: "#", label: frontageContent.frontpage_booking_btn_label} ] }>
-                <Header size={3} title={frontageContent.frontpage_booking_description_header} />
-                <p>{frontageContent.frontpage_booking_description_text}</p>
+              <SpotlightImage imgSrc={getImage(frontpageContent.frontpageTop.frontpage_booking_description_logo, "/images/auditorium.jpeg")} />
+              <Content actions={ [ {href: "#", label: frontpageContent.frontpageTop.frontpage_booking_btn_label} ] }>
+                <Header size={3} title={frontpageContent.frontpageTop.frontpage_booking_description_header} />
+                <p>{frontpageContent.frontpageTop.frontpage_booking_description_text}</p>
               </Content>
             </Spotlight>
 
-            <p>{frontageContent.frontpage_booking_description2}</p>
+            <p>{frontpageContent.frontpageTop.frontpage_booking_description2}</p>
 
             <footer>
               <ul className="actions special">
-                <li><a href="#" className="button">{frontageContent.frontpage_booking_btn2_label}</a></li>
+                <li><a href="#" className="button">{frontpageContent.frontpageTop.frontpage_booking_btn2_label}</a></li>
               </ul>
             </footer>
           </div>
@@ -66,48 +60,64 @@ function FrontPage() {
 
         <section className="wrapper style1 special">
           <div className="inner">
-            <Header size={2} title="Rebel // Teknologihuset">Bli kjent med Teknologihuset på Rebel</Header>
+            <Header
+                size={2}
+                title={getText(frontpageContent
+                  .frontpageMatrix
+                  .frontpage_content_matrix_header, "Rebel // Teknologihuset")}>
+              {getText(frontpageContent
+                  .frontpageMatrix
+                  .frontpage_content_matrix_subheader, "Bli kjent med Teknologihuset på Rebel")}
+            </Header>
 
-            <Spotlight>
-              <SpotlightImage imgSrc="/images/partnere.jpeg" />
-              <Content actions={ [ {href: "#", label: "Details"} ] }>
-                <Header size={3} title={"Teknologihusets partnere"} />
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent
-                  taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos magna fames ac turpis
-                  egestas amet non lorem amet.</p>
+            <Spotlight imgAlign={
+              !frontpageContent
+                  .frontpageMatrix[getMatrixElement("element1").imagePosition] ? "left": "right"
+            }>
+              <SpotlightImage imgSrc={getImage(frontpageContent.frontpageMatrix[getMatrixElement("element1").image], "/images/partnere.jpeg")} />
+              <Content actions={ getMatrixElementButtonArray(frontpageContent, "element1") }>
+                <Header
+                    size={3}
+                    title={getText(frontpageContent
+                    .frontpageMatrix[getMatrixElement("element1").header], "Teknologihusets partnere")} />
+                <p>{ frontpageContent.frontpageMatrix[getMatrixElement("element1").textLabel] }</p>
               </Content>
             </Spotlight>
 
-            <Spotlight imgAlign="left">
-              <SpotlightImage imgSrc="/images/resepsjon.jpeg" />
-              <Content actions={ [ {href: "#", label: "Details"} ] }>
-                <Header size={3} title={"Rebel-bygget"} />
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent
-                  taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos magna fames ac turpis
-                  egestas amet non lorem amet.</p>
+            <Spotlight imgAlign={
+              !frontpageContent
+                  .frontpageMatrix[getMatrixElement("element2").imagePosition] ? "left": "right"
+            }>
+              <SpotlightImage imgSrc={getImage(frontpageContent.frontpageMatrix[getMatrixElement("element2").image], "/images/resepsjon.jpeg")} />
+              <Content actions={ getMatrixElementButtonArray(frontpageContent, "element2") }>
+                <Header
+                    size={3}
+                    title={getText(frontpageContent
+                        .frontpageMatrix[getMatrixElement("element2").header], "Rebel-bygget")} />
+                <p>{ frontpageContent.frontpageMatrix[getMatrixElement("element2").textLabel] }</p>
               </Content>
             </Spotlight>
 
-            <Spotlight>
-              <SpotlightImage imgSrc="/images/trapp.jpeg" />
-              <Content actions={ [ {href: "#", label: "Details"} ] }>
-                <Header size={3} title={"Fasiliteter"} />
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent
-                  taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos magna fames ac turpis
-                  egestas amet non lorem amet.</p>
+            <Spotlight imgAlign={
+              !frontpageContent
+                  .frontpageMatrix[getMatrixElement("element3").imagePosition] ? "left": "right"
+            }>
+              <SpotlightImage imgSrc={getImage(frontpageContent.frontpageMatrix[getMatrixElement("element3").image], "/images/trapp.jpeg")} />
+              <Content actions={ getMatrixElementButtonArray(frontpageContent, "element3") }>
+                <Header
+                    size={3}
+                    title={getText(frontpageContent
+                        .frontpageMatrix[getMatrixElement("element3").header], "Fasiliteter")} />
+                <p>{ frontpageContent.frontpageMatrix[getMatrixElement("element3").textLabel] }</p>
               </Content>
             </Spotlight>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent
-              taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos malesuada fames ac turpis
-              egestas. In non lorem amet. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent
-              per conubia nostra, per inceptos himenaeos. Etiam tristique eu nibh.</p>
+            <p>{getText(frontpageContent
+                .frontpageMatrix
+                .frontpage_content_matrix_description_text, "Lorem Ipsum")}</p>
 
-            <footer>
-              <ul className="actions special">
-                <li><a href="#" className="button">Les mer</a></li>
-              </ul>
-            </footer>
+            { getMatrixFooter(frontpageContent) }
+
           </div>
         </section>
 
@@ -164,6 +174,55 @@ function FrontPage() {
         </section>
       </div>
   )
+}
+
+interface ME {
+  header: string;
+  textLabel: string;
+  image: string;
+  imagePosition: string;
+  bntLabel: string;
+  bntLabelUrl: string;
+  bntVisibility: string
+}
+
+const getMatrixElement: (key: string) => ME = (key: string) => {
+  return {
+    header: `frontpage_content_matrix_${key}_header`,
+    textLabel: `frontpage_content_matrix_${key}_text`,
+    image: `frontpage_content_matrix_${key}_image`,
+    imagePosition: `frontpage_content_matrix_${key}_image_position`,
+    bntLabel: `frontpage_content_matrix_${key}_btn_label`,
+    bntLabelUrl: `frontpage_content_matrix_${key}_btn_url`,
+    bntVisibility: `frontpage_content_matrix_${key}_btn_visibility`
+  }
+}
+
+function getMatrixElementButtonArray(frontpageContent: any, elementName: string): Action[] | undefined {
+  const element = [{href: frontpageContent
+      .frontpageMatrix[getMatrixElement(elementName).bntLabelUrl]
+      , label: frontpageContent
+      .frontpageMatrix[getMatrixElement(elementName).bntLabel]}]
+  return frontpageContent
+      .frontpageMatrix[getMatrixElement(elementName).bntVisibility] ? element : undefined
+}
+
+function getMatrixFooter(frontpageContent: any) {
+  return frontpageContent
+          .frontpageMatrix
+          .frontpage_content_matrix_description_btn_visibility ? <footer>
+    <ul className="actions special">
+      <li>
+        <a href={getText(frontpageContent
+            .frontpageMatrix
+            .frontpage_content_matrix_description_btn_url, "https://teknologihuset.no")} className="button">
+          {getText(frontpageContent
+              .frontpageMatrix
+              .frontpage_content_matrix_description_btn_label, "Les mer.")}
+        </a>
+      </li>
+    </ul>
+  </footer> : ""
 }
 
 export default FrontPage
