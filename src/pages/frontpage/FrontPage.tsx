@@ -8,13 +8,15 @@ import th, {getImage, getText} from "../../core/client/client";
 import {useQuery} from "react-query";
 import Loader from "../../components/loader/Loader";
 import {Action} from "../../components/content/ActionList";
+import {PortableText} from '@portabletext/react'
 
 function FrontPage() {
 
   const query = `
       {
         "frontpageTop": *[ _type == "texts_frontpage_top"][0],
-        "frontpageMatrix": *[ _type == "texts_frontpage_content_matrix"][0]
+        "frontpageMatrix": *[ _type == "texts_frontpage_content_matrix"][0],
+        "frontpageSpotlight": *[ _type == "texts_frontpage_spotlight"][0]
       }
     `;
 
@@ -123,14 +125,18 @@ function FrontPage() {
 
         <section className="wrapper style3 special">
           <div className="inner">
-            <Header title={"Communities"}>
-              Aptent taciti sociosqu litora torquent et conubia sed etiam.<br/>
-              Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam<br/>
-              turpis mauris, ultricies erat malesuada quis.
+            <Header title={getText(frontpageContent.frontpageSpotlight.frontpage_spotlight_header, "Communities")}>
+              {
+                getText(frontpageContent.frontpageSpotlight.frontpage_spotlight_text, "Lorem Ipsum")
+              }
             </Header>
             <footer>
               <ul className="actions special">
-                <li><a href="#" className="button big">Les mer</a></li>
+                <li>
+                  <a href={getText(frontpageContent.frontpageSpotlight.frontpage_spotlight_btn_url, "https://teknologihuset.no")} className="button big">{
+                    getText(frontpageContent.frontpageSpotlight.frontpage_spotlight_btn_label, "Les mer")
+                  }</a>
+                </li>
               </ul>
             </footer>
           </div>
