@@ -8,7 +8,6 @@ import th, {getImage, getText} from "../../core/client/client";
 import {useQuery} from "react-query";
 import Loader from "../../components/loader/Loader";
 import {Action} from "../../components/content/ActionList";
-import {PortableText} from '@portabletext/react'
 
 function FrontPage() {
 
