@@ -15,7 +15,8 @@ function FrontPage() {
       {
         "frontpageTop": *[ _type == "texts_frontpage_top"][0],
         "frontpageMatrix": *[ _type == "texts_frontpage_content_matrix"][0],
-        "frontpageSpotlight": *[ _type == "texts_frontpage_spotlight"][0]
+        "frontpageSpotlight": *[ _type == "texts_frontpage_spotlight"][0],
+        "frontpageContact": *[ _type == "texts_frontpage_contact"][0]
       }
     `;
 
@@ -145,17 +146,14 @@ function FrontPage() {
           <div className="inner">
             <section>
               <header>
-                <h3>Kontakt Teknologihuset</h3>
+                <h3>{getText(frontpageContent.frontpageContact.frontpage_contact_header, "Kontakt Teknologihuset")}</h3>
               </header>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent
-                taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos magna fames ac turpis
-                egestas amet non lorem amet.</p>
+              <p>{getText(frontpageContent.frontpageContact.frontpage_contact_text)}</p>
               <ul className="icons">
-                <li><a href="#" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
-                <li><a href="#" className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
-                <li><a href="#" className="icon brands fa-snapchat-ghost"><span className="label">Snapchat</span></a>
-                </li>
-                <li><a href="#" className="icon brands fa-github"><span className="label">GitHub</span></a></li>
+                <li><a href={getText(frontpageContent.frontpageContact.frontpage_contact_twitter_url, "#")} className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
+                <li><a href={getText(frontpageContent.frontpageContact.frontpage_contact_instagram_url, "#")} className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
+                <li><a href={getText(frontpageContent.frontpageContact.frontpage_contact_snapchat_url, "#")} className="icon brands fa-snapchat-ghost"><span className="label">Snapchat</span></a></li>
+                <li><a href={getText(frontpageContent.frontpageContact.frontpage_contact_github_url, "#")} className="icon brands fa-github"><span className="label">GitHub</span></a></li>
               </ul>
             </section>
             <section>
