@@ -17,7 +17,7 @@ The Sanity Studio interface is custom-built to fit the needs of Teknologihuset. 
 
 1. Make sure you have Node & NPM installed: `npm -v`
 2. Install the main application from the root folder: `npm install`
-3. Install the Sanity CLI: `xxx`
+3. Install the Sanity CLI: `npm install -g @sanity/cli`
 4. Install the Sanity Studio application: `cd teknologihusetweb && npm install`
 
 ## How to run a dev environment locally:
