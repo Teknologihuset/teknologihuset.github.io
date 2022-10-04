@@ -4,28 +4,12 @@ import Header from "../header/Header";
 import Spotlight from "../spotlight/Spotlight";
 import Content from "../content/Content";
 import SpotlightImage from "../image/SpotlightImage";
-import th, { getImage, getText } from "../../core/client/client";
-import { useQuery } from "react-query";
+import { getImage, getText } from "../../core/client/client";
 import Loader from "../loader/Loader";
 import { Action } from "../content/ActionList";
+import { Props } from "../../pages";
 
-function FrontPage() {
-  const query = `
-      {
-        "frontpageTop": *[ _type == "texts_frontpage_top"][0],
-        "frontpageMatrix": *[ _type == "texts_frontpage_content_matrix"][0],
-        "frontpageSpotlight": *[ _type == "texts_frontpage_spotlight"][0]
-      }
-    `;
-
-  const { data: frontpageContent } = useQuery("frontageContentList", () =>
-    th
-      .sanity()
-      .fetch(query)
-      .then((value) => value)
-      .catch((reason) => console.error(reason))
-  );
-
+function FrontPage({ pageContent: frontpageContent, bannerContent }: Props) {
   if (!frontpageContent) {
     return (
       <div id="wrapper">
@@ -36,7 +20,7 @@ function FrontPage() {
 
   return (
     <div id="wrapper">
-      <Banner />
+      <Banner bannerContent={bannerContent} />
 
       <section className="wrapper style2 special">
         <div className="inner">
