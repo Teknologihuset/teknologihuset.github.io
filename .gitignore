@@ -1,8 +1,9 @@
 node_modules
 dist
 .idea
-.env
+.env.local
 .env.*
 .DS_Store
 *.tar.gz
 *.mutation.js
+.next

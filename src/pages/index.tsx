@@ -1,12 +1,7 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import FrontPage from "./components/frontpage/FrontPage";
-import "../public/assets/sass/main.scss";
 import * as query from "react-query";
+import FrontPage from "../components/frontpage/FrontPage";
 import { RecoilRoot } from "recoil";
-
-//import dotenv from "dotenv"
-//dotenv.config()
+import React from "react";
 
 const queryClient = new query.QueryClient({
   defaultOptions: {
@@ -20,15 +15,12 @@ const queryClient = new query.QueryClient({
   },
 });
 
-const container = document.getElementById("root");
-// @ts-ignore
-const root = createRoot(container);
-root.render(
-  <React.StrictMode>
+export default function () {
+  return (
     <RecoilRoot>
       <query.QueryClientProvider client={queryClient}>
         <FrontPage />
       </query.QueryClientProvider>
     </RecoilRoot>
-  </React.StrictMode>
-);
+  );
+}
