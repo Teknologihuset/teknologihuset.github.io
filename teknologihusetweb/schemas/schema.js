@@ -11,6 +11,7 @@ import texts_frontpage_banner from "./texts/frontpage-banner";
 import texts_frontpage_section_top from "./texts/frontpage-top";
 import frontpageContentMatrix from "./texts/frontpage-content-matrix";
 import texts_frontpage_spotlight from "./texts/frontpage-spotlight";
+import texts_frontpage_contact from "./texts/frontpage-contact";
 import partner from "./partners";
 
 export default createSchema({
@@ -24,6 +25,7 @@ export default createSchema({
       texts_frontpage_banner,
       texts_frontpage_section_top,
       texts_frontpage_spotlight,
+      texts_frontpage_contact,
       frontpageContentMatrix
   ]),
 })

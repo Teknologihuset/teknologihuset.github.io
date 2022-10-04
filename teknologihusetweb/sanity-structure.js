@@ -54,6 +54,13 @@ export default () =>
                                             .schemaType("texts_frontpage_spotlight")
                                             .documentId("texts_frontpage_spotlight")
                                     ),
+                                S.listItem()
+                                    .title("Forside - Kontakt")
+                                    .child(
+                                        S.editor()
+                                            .schemaType("texts_frontpage_contact")
+                                            .documentId("texts_frontpage_contact")
+                                    ),
                             ])
                     ),
                 S.divider(),
