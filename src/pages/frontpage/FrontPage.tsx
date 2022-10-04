@@ -160,7 +160,7 @@ function FrontPage() {
               </ul>
             </section>
             <section>
-              <form method="post" action="#">
+              <form method="post" action="https://formspree.io/f/xvoyrvwp">
                 <div className="fields">
                   <div className="field half"><input type="text" name="name" id="name" placeholder="Navn"/></div>
                   <div className="field half"><input type="email" name="email" id="email" placeholder="E-post"/></div>
