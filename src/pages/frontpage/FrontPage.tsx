@@ -32,6 +32,8 @@ function FrontPage() {
     </div>
   }
 
+
+
   return (
       <div id="wrapper">
         <Banner />
