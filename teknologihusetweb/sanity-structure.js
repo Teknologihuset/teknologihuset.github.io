@@ -5,7 +5,8 @@ const hiddenDocTypes = listItem => ![
     "texts_frontpage_banner",
     "texts_frontpage_top",
     "texts_frontpage_content_matrix",
-    "texts_frontpage_spotlight"
+    "texts_frontpage_spotlight",
+    "texts_frontpage_contact"
 ].includes(listItem.getId())
 
 export default () =>
@@ -53,6 +54,13 @@ export default () =>
                                         S.editor()
                                             .schemaType("texts_frontpage_spotlight")
                                             .documentId("texts_frontpage_spotlight")
+                                    ),
+                                S.listItem()
+                                    .title("Forside - Kontakt")
+                                    .child(
+                                        S.editor()
+                                            .schemaType("texts_frontpage_contact")
+                                            .documentId("texts_frontpage_contact")
                                     ),
                             ])
                     ),
