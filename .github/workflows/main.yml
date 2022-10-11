@@ -36,7 +36,9 @@ jobs:
           npm run build
   
       - name: GitHub Pages
+
         uses: crazy-max/ghaction-github-pages@v2.6.0
+        if: github.ref == 'refs/heads/master'
         with:
           repo: Teknologihuset/teknologihuset.github.io
           target_branch: gh-pages
