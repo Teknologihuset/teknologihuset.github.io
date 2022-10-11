@@ -4,6 +4,7 @@ import "../../public/assets/sass/main.scss";
 import type { AppProps } from "next/app";
 import { useState } from "react";
 import Head from "next/head";
+import MenuNavbar from "../components/menu-navbar/MenuNavbar";
 
 export default function Teknologihuset({ Component, pageProps }: AppProps) {
   const [navMenuVisible, setNavMenuVisible] = useState(false);
@@ -108,48 +109,10 @@ export default function Teknologihuset({ Component, pageProps }: AppProps) {
           </ul>
         </nav>
       </header>
-      <nav id="menu" className={navMenuVisible ? "visible" : ""}>
-        <div className="inner">
-          <h2>Menu</h2>
-          <ul className="links">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/generic.html">Ipsum veroeros</a>
-            </li>
-            <li>
-              <a href="/generic.html">Tempus etiam</a>
-            </li>
-            <li>
-              <a href="/generic.html">Consequat dolor</a>
-            </li>
-            <li>
-              <a href="/elements.html">Elements</a>
-            </li>
-          </ul>
-          <ul className="actions stacked">
-            <li>
-              <a href="#" className="button fit primary">
-                Get Started
-              </a>
-            </li>
-            <li>
-              <a href="#" className="button fit">
-                Log In
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <a
-          className="close"
-          href="#menu"
-          onClick={() => setNavMenuVisible(false)}
-        >
-          Close
-        </a>
-      </nav>
+      <MenuNavbar
+        visible={navMenuVisible}
+        onClose={() => setNavMenuVisible(false)}
+      />
       <Component {...pageProps} />
     </>
   );
