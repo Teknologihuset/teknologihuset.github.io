@@ -4,10 +4,10 @@ import Header from "../header/Header";
 import Spotlight from "../spotlight/Spotlight";
 import Content from "../content/Content";
 import SpotlightImage from "../image/SpotlightImage";
-import { getImage, getText } from "../../core/client/client";
 import Loader from "../loader/Loader";
 import { Action } from "../content/ActionList";
 import { Props } from "../../pages";
+import { getImage, getText } from "../../lib/sanity";
 
 function FrontPage({ pageContent: frontpageContent, bannerContent }: Props) {
   if (!frontpageContent) {

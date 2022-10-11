@@ -1,5 +1,4 @@
-import { getImage } from "../../core/client/client";
-import Loader from "../loader/Loader";
+import { getImage } from "../../lib/sanity";
 
 function Banner({ bannerContent }: { bannerContent: any }) {
   return (

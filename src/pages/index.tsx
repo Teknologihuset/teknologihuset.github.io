@@ -1,6 +1,6 @@
 import FrontPage from "../components/frontpage/FrontPage";
 import React from "react";
-import th from "../core/client/client";
+import { sanityClient } from "../lib/sanity.server";
 
 export interface Props {
   pageContent: any;
@@ -16,8 +16,7 @@ export async function getServerSideProps() {
       }
     `;
 
-  const frontpageContent = await th
-    .sanity()
+  const frontpageContent = await sanityClient
     .fetch(frontPageQuery)
     .then((value) => value)
     .catch((reason) => console.error(reason));
@@ -26,8 +25,7 @@ export async function getServerSideProps() {
       *[ _type == 'texts_frontpage_banner' ] { frontpage_header, frontpage_subheader, frontpage_action_btn_label, frontpage_header_logo }
     `;
 
-  const bannerContent = await th
-    .sanity()
+  const bannerContent = await sanityClient
     .fetch(bannerQuery)
     .then((value) => value.pop())
     .catch((reason) => console.error(reason));
