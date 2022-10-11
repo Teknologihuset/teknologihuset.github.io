@@ -34,15 +34,3 @@ jobs:
         run: |
           npm install
           npm run build
-  
-      - name: GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2.6.0
-        with:
-          repo: Teknologihuset/teknologihuset.github.io
-          target_branch: gh-pages
-          build_dir: dist
-          jekyll: false
-          dry_run: false
-          verbose: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

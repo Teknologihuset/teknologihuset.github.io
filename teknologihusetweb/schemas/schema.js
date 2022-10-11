@@ -1,7 +1,7 @@
 // First, we must import the schema creator
-import createSchema from 'part:@sanity/base/schema-creator'
+import createSchema from "part:@sanity/base/schema-creator";
 
-import schemaTypes from 'all:part:@sanity/base/schema-type'
+import schemaTypes from "all:part:@sanity/base/schema-type";
 
 import menu from "./menu";
 import menuElement from "./menu-element";
@@ -15,17 +15,17 @@ import texts_frontpage_contact from "./texts/frontpage-contact";
 import partner from "./partners";
 
 export default createSchema({
-  name: 'default',
+  name: "default",
   types: schemaTypes.concat([
-      menuElement,
-      menu,
-      page,
-      //section,
-      partner,
-      texts_frontpage_banner,
-      texts_frontpage_section_top,
-      texts_frontpage_spotlight,
-      texts_frontpage_contact,
-      frontpageContentMatrix
+    menuElement,
+    menu,
+    page,
+    //section,
+    partner,
+    texts_frontpage_banner,
+    texts_frontpage_section_top,
+    texts_frontpage_spotlight,
+    texts_frontpage_contact,
+    frontpageContentMatrix,
   ]),
-})
+});
