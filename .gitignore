@@ -6,3 +6,4 @@ dist
 *.mutation.js
 .next
 .env*.local
+.vercel

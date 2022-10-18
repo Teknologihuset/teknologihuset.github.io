@@ -7,7 +7,7 @@ export interface Props {
   bannerContent: any;
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const frontPageQuery = `
       {
         "frontpageTop": *[ _type == "texts_frontpage_top"][0],
