@@ -8,15 +8,16 @@ export type Action = {
     href: string
     label: string
     className?: string
+    visible?: boolean
 }
 
 const ActionList: React.FC<ActionListProps> = (props) => {
     return (
         <ul className="actions">
             {
-                props.actions.map((action, i) =>
-                    <li key={action.href + i}>
-                        <a href={action.href} className={action.className ?? "button"}>{action.label}</a>
+                props.actions.filter(({visible}) => visible).map(({className, href, label}, i) =>
+                    <li key={href + i}>
+                        <a href={href} className={className ?? "button"}>{label}</a>
                     </li>)
             }
         </ul>

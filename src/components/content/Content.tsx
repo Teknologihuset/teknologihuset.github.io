@@ -8,10 +8,10 @@ type ContentProps = {
 
 const Content: React.FC<ContentProps> = (props) => {
     return <div className="content">
-        { props.children }
-        <footer>
-            <ActionList actions={props.actions ?? []} />
-        </footer>
+        {props.children}
+        {
+            !!props.actions && <ActionList actions={props.actions}/>
+        }
     </div>
 }
 
