@@ -279,18 +279,21 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                 <div className="inner">
                     <section>
                         <header>
-                            <h3>Kontakt Teknologihuset</h3>
+                            <h3>{getText(
+                                frontpageContent.texts_frontpage_contact.frontpage_contact_text,
+                                "Kontakt Teknologihuset"
+                            )}</h3>
                         </header>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                            dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora
-                            torquent per conubia nostra, per inceptos himenaeos magna fames ac
-                            turpis egestas amet non lorem amet.
+                        {getText(
+                            frontpageContent.texts_frontpage_contact.frontpage_contact_text,
+                            "Lorem Ipsum"
+                        )}
                         </p>
                         <ul className="icons">
                             <li>
                                 <a
-                                    href="#"
+                                    href={frontpageContent.texts_frontpage_contact.frontpage_contact_twitter_url}
                                     className="icon brands fa-twitter"
                                 >
                                     <span className="label">Twitter</span>
@@ -298,7 +301,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                    href={frontpageContent.texts_frontpage_contact.frontpage_contact_instagram_url}
                                     className="icon brands fa-instagram"
                                 >
                                     <span className="label">Instagram</span>
@@ -306,15 +309,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                             </li>
                             <li>
                                 <a
-                                    href="#"
-                                    className="icon brands fa-snapchat-ghost"
-                                >
-                                    <span className="label">Snapchat</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href="#"
+                                    href={frontpageContent.texts_frontpage_contact.frontpage_contact_github_url}
                                     className="icon brands fa-github"
                                 >
                                     <span className="label">GitHub</span>
