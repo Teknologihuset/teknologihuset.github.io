@@ -12,7 +12,8 @@ export async function getStaticProps() {
       {
         "frontpageTop": *[ _type == "texts_frontpage_top"][0],
         "frontpageMatrix": *[ _type == "texts_frontpage_content_matrix"][0],
-        "frontpageSpotlight": *[ _type == "texts_frontpage_spotlight"][0]
+        "frontpageSpotlight": *[ _type == "texts_frontpage_spotlight"][0],
+        "frontpageContact": *[ _type == "texts_frontpage_contact"][0]
       }
     `;
 

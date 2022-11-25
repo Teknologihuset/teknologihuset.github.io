@@ -280,7 +280,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                     <section>
                         <header>
                             <h3>{getText(
-                                frontpageContent.texts_frontpage_contact.frontpage_contact_text,
+                                frontpageContent.frontpageContact.frontpage_contact_header,
                                 "Kontakt Teknologihuset"
                             )}</h3>
                         </header>
@@ -293,7 +293,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                         <ul className="icons">
                             <li>
                                 <a
-                                    href={frontpageContent.texts_frontpage_contact.frontpage_contact_twitter_url}
+                                    href={frontpageContent.frontpageContact.frontpage_contact_twitter_url}
                                     className="icon brands fa-twitter"
                                 >
                                     <span className="label">Twitter</span>
@@ -301,7 +301,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                             </li>
                             <li>
                                 <a
-                                    href={frontpageContent.texts_frontpage_contact.frontpage_contact_instagram_url}
+                                    href={frontpageContent.frontpageContact.frontpage_contact_instagram_url}
                                     className="icon brands fa-instagram"
                                 >
                                     <span className="label">Instagram</span>
@@ -309,7 +309,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                             </li>
                             <li>
                                 <a
-                                    href={frontpageContent.texts_frontpage_contact.frontpage_contact_github_url}
+                                    href={frontpageContent.frontpageContact.frontpage_contact_github_url}
                                     className="icon brands fa-github"
                                 >
                                     <span className="label">GitHub</span>
@@ -318,7 +318,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                         </ul>
                     </section>
                     <section>
-                        <form method="post" action="#">
+                        <form method="post" action="https://formspree.io/f/xvoyrvwp">
                             <div className="fields">
                                 <div className="field half">
                                     <input type="text" name="name" id="name" placeholder="Navn"/>
