@@ -286,7 +286,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                         </header>
                         <p>
                         {getText(
-                            frontpageContent.texts_frontpage_contact.frontpage_contact_text,
+                            frontpageContent.frontpageContact.frontpage_contact_text,
                             "Lorem Ipsum"
                         )}
                         </p>
