@@ -4,8 +4,6 @@ export default {
     name: "texts_frontpage_content_matrix",
     title: "Tekster",
     type: "document",
-    _experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
-    //__experimental_actions: ['create', 'update', 'delete', 'publish'],
     fieldsets: [
         {name: "e1", title: 'Element 1', options: {collapsible: true, collapsed: true}},
         {name: 'e2', title: 'Element 2', options: {collapsible: true, collapsed: true}},

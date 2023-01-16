@@ -22,7 +22,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
         <div id="wrapper">
             <Banner bannerContent={bannerContent}/>
 
-            <section className="wrapper style2 special">
+            <section id="room-booking" className="wrapper style2 special">
                 <div className="inner">
                     <Header
                         title={frontpageContent.frontpageTop.frontpage_booking_header}
@@ -64,26 +64,27 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                         </Content>
                     </Spotlight>
 
-                    <p>{frontpageContent.frontpageTop.frontpage_booking_description2}</p>
-
                     {frontpageContent.frontpageTop.frontpage_booking_btn2_label_visibility &&
-                        <footer>
-                            <ul className="actions special">
-                                <li>
-                                    <a
-                                        href="#"
-                                        className="button"
-                                    >
-                                        {frontpageContent.frontpageTop.frontpage_booking_btn2_label}
-                                    </a>
-                                </li>
-                            </ul>
-                        </footer>
+                        <>
+                            <p>{frontpageContent.frontpageTop.frontpage_booking_description2}</p>
+                            <footer>
+                                <ul className="actions special">
+                                    <li>
+                                        <a
+                                            href="#"
+                                            className="button"
+                                        >
+                                            {frontpageContent.frontpageTop.frontpage_booking_btn2_label}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </footer>
+                        </>
                     }
                 </div>
             </section>
 
-            <section className="wrapper style1 special">
+            <section id="info-teknologihuset" className="wrapper style1 special">
                 <div className="inner">
                     <Header
                         size={2}
@@ -237,7 +238,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                 </div>
             </section>
 
-            <section className="wrapper style3 special">
+            <section id="community-info" className="wrapper style3 special">
                 <div className="inner">
                     <Header
                         title={getText(

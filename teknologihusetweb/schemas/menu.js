@@ -2,7 +2,6 @@ export default {
     name: "menu",
     title: "Meny",
     type: "document",
-    __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
     fields:[
         {
             title: "Overskrift",
