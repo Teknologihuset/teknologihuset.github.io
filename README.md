@@ -18,7 +18,7 @@ The Sanity Studio interface is custom-built to fit the needs of Teknologihuset. 
 1. Make sure you have Node & NPM installed: `npm -v`
 2. Install the main application from the root folder: `npm install`
 3. Install the Sanity CLI: `npm install -g @sanity/cli`
-4. Install the Sanity Studio application: `cd teknologihusetweb && npm install`
+4. Install the Sanity Studio application: `cd teknologihusetweb && sanity install`
 
 ## How to run a dev environment locally:
 
@@ -41,8 +41,8 @@ With the above `.env` file, your local instance of Teknologihuset Web is served 
 
 1. Add a new schema to the `schemas` folder within the `teknologihusetweb` folder.
 2. If you are also changing the menu layout, make the necessary changes to the`sanity-structure`.js file.
-3. If you need to make changes to the Sanity Studio settings, then edit the `sanity.json` file.
-4. To see your changes in dev, run `sanity start`.
+3. If you need to make changes to the Sanity Studio settings, then edit the `sanity.config.js` file.
+4. To see your changes in dev, run `sanity dev`.
 5. To deploy a new version to production, first run `sanity build` and then `sanity deploy`
 
 It's possible to change the dataset from within Sanity Studio once the application is started.
