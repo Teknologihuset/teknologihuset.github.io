@@ -1,16 +1,14 @@
-import S from "@sanity/desk-tool/structure-builder";
-
 const hiddenDocTypes = listItem => ![
     "menu",
     "texts_frontpage_banner",
     "texts_frontpage_top",
     "texts_frontpage_content_matrix",
     "texts_frontpage_spotlight",
-    "texts_frontpage_contact"
+    "texts_frontpage_contact",
+    "texts_frontpage_partners"
 ].includes(listItem.getId())
 
-export default () =>
-    S.list()
+export default (S) => S.list()
         .title("Teknologihuset Web")
         .items(
             [
@@ -40,6 +38,13 @@ export default () =>
                                         S.editor()
                                             .schemaType("texts_frontpage_top")
                                             .documentId("texts_frontpage_top")
+                                    ),
+                                S.listItem()
+                                    .title("Forside - Partnere")
+                                    .child(
+                                        S.editor()
+                                            .schemaType("texts_frontpage_partners")
+                                            .documentId("texts_frontpage_partners")
                                     ),
                                 S.listItem()
                                     .title("Forside - Innholdsmatrise")

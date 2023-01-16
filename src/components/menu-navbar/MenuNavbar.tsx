@@ -7,12 +7,12 @@ const MenuNavbar = ({ visible, onClose }: Props) => {
   return (
     <nav id="menu" className={visible ? "visible" : ""}>
       <div className="inner">
-        <h2>Menu</h2>
+        <h2>Meny</h2>
         <ul className="links">
           <li>
-            <a href="/">Home</a>
+            <a href="/">Hjem</a>
           </li>
-          <li>
+          {/*<li> todo: disse skal erstattes av meny-config i sanity
             <a href="/generic.html">Ipsum veroeros</a>
           </li>
           <li>
@@ -35,7 +35,7 @@ const MenuNavbar = ({ visible, onClose }: Props) => {
             <a href="#" className="button fit">
               Log In
             </a>
-          </li>
+          </li>*/}
         </ul>
       </div>
 

@@ -3,8 +3,6 @@ export default {
     name: "texts_frontpage_contact",
     title: "Tekster",
     type: "document",
-    __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
-    //__experimental_actions: ['create', 'update', 'delete', 'publish'],
     fields: [
         {
             title: "Kontakt Overskrift",
