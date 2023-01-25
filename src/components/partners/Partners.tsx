@@ -18,7 +18,9 @@ interface PartnerInfo {
 }
 
 function createPartnerLogoGrid(partnerList: Array<PartnerInfo>) {
-    return partnerList.map(p => <div className="col-2" key={p.partner_name}>
+    return partnerList
+        .filter(p => p.partner_visibility)
+        .map(p => <div className="col-2" key={p.partner_name}>
             <span className="image fit">
                 <img src={
                     getImage(
