@@ -14,7 +14,10 @@ export async function getStaticProps() {
         "frontpageMatrix": *[ _type == "texts_frontpage_content_matrix"][0],
         "frontpageSpotlight": *[ _type == "texts_frontpage_spotlight"][0],
         "frontpageContact": *[ _type == "texts_frontpage_contact"][0],
-        "frontpagePartners": *[ _type == "texts_frontpage_partners"][0]
+        "frontpagePartners": {
+            "texts": *[ _type == "texts_frontpage_partners"][0],
+            "partnerList": *[ _type == "partner"]
+         }
       }
     `;
 

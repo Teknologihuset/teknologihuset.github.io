@@ -8,6 +8,7 @@ import Loader from "../loader/Loader";
 import {Action} from "../content/ActionList";
 import {Props} from "../../pages";
 import {getImage, getText} from "../../lib/sanity";
+import Partners from "../partners/Partners";
 
 function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
     if (!frontpageContent) {
@@ -237,6 +238,8 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                     {getMatrixFooter(frontpageContent)}
                 </div>
             </section>
+
+            <Partners partnerContent={frontpageContent.frontpagePartners} />
 
             <section id="community-info" className="wrapper style3 special">
                 <div className="inner">
