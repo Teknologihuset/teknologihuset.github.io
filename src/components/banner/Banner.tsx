@@ -22,6 +22,11 @@ function Banner({ bannerContent }: { bannerContent: any }) {
                   {bannerContent.frontpage_action_btn_label}
                 </a>
               </li>
+              <li>
+                <a href="#kontaktskjema" className="button big">
+                  Kontakt
+                </a>
+              </li>
             </ul>
           </footer>
         </div>

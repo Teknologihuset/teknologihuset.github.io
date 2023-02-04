@@ -321,7 +321,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                             </li>
                         </ul>
                     </section>
-                    <section>
+                    <section id="kontaktskjema">
                         <form method="post" action="https://formspree.io/f/xvoyrvwp">
                             <div className="fields">
                                 <div className="field half">
@@ -344,6 +344,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                   />
                                 </div>
                             </div>
+                            <div className="g-recaptcha" data-sitekey="6LetcFEkAAAAAByjiXF3YhUcgWv2Wzu3uikbN-v-" />
                             <ul className="actions">
                                 <li>
                                     <input type="submit" value="Send melding"/>
