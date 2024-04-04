@@ -23,68 +23,6 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
         <div id="wrapper">
             <Banner bannerContent={bannerContent}/>
 
-            <section id="room-booking" className="wrapper style2 special">
-                <div className="inner">
-                    <Header
-                        title={frontpageContent.frontpageTop.frontpage_booking_header}
-                    >
-                        {frontpageContent.frontpage_booking_subheader}
-                    </Header>
-
-                    <Spotlight>
-                        <SpotlightImage
-                            imgSrc={getImage(
-                                frontpageContent.frontpageTop
-                                    .frontpage_booking_description_logo,
-                                "/images/auditorium.jpeg"
-                            )}
-                        />
-                        <Content
-                            actions={[
-                                {
-                                    href: "#",
-                                    label:
-                                    frontpageContent.frontpageTop.frontpage_booking_btn_label,
-                                    visible: frontpageContent.frontpageTop.frontpage_booking_btn_label_visibility
-                                },
-                            ]}
-                        >
-                            <Header
-                                size={3}
-                                title={
-                                    frontpageContent.frontpageTop
-                                        .frontpage_booking_description_header
-                                }
-                            />
-                            <p>
-                                {
-                                    frontpageContent.frontpageTop
-                                        .frontpage_booking_description_text
-                                }
-                            </p>
-                        </Content>
-                    </Spotlight>
-
-                    {frontpageContent.frontpageTop.frontpage_booking_btn2_label_visibility &&
-                        <>
-                            <p>{frontpageContent.frontpageTop.frontpage_booking_description2}</p>
-                            <footer>
-                                <ul className="actions special">
-                                    <li>
-                                        <a
-                                            href="#"
-                                            className="button"
-                                        >
-                                            {frontpageContent.frontpageTop.frontpage_booking_btn2_label}
-                                        </a>
-                                    </li>
-                                </ul>
-                            </footer>
-                        </>
-                    }
-                </div>
-            </section>
-
             <section id="info-teknologihuset" className="wrapper style1 special">
                 <div className="inner">
                     <Header
