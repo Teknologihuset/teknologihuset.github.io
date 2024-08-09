@@ -18,7 +18,7 @@ function Banner({ bannerContent }: { bannerContent: any }) {
           <footer>
             <ul className="actions">
               <li>
-                <a href="#info-teknologihuset" className="button big">
+                <a href="#about_th" className="button big">
                   {bannerContent.frontpage_action_btn_label}
                 </a>
               </li>

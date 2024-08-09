@@ -5,10 +5,11 @@ import Spotlight from "../spotlight/Spotlight";
 import Content from "../content/Content";
 import SpotlightImage from "../image/SpotlightImage";
 import Loader from "../loader/Loader";
-import {Action} from "../content/ActionList";
+import ActionList, {Action} from "../content/ActionList";
 import {Props} from "../../pages";
 import {getImage, getText} from "../../lib/sanity";
 import Partners from "../partners/Partners";
+import Copyright from "../copyright/Copyright";
 
 function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
     if (!frontpageContent) {
@@ -23,19 +24,42 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
         <div id="wrapper">
             <Banner bannerContent={bannerContent}/>
 
+            <section className="wrapper style1 align-center">
+                <div className="inner align-left">
+                    <section>
+                        <h3>
+                            Teknologihuset i Oslo muliggjør kunnskapsdeling ved å tilby gratis rom, lokaler og saler helt gratis for alle communities som arrangerer åpne og fri fagmøter.
+                        </h3>
+                        <p>
+                            Teknologihuset i Oslo er frivillig drevet av ildsjeler fra det norske fagmiljøet. Til sammen har vi over 20 års erfaring med å drive community-grupper og meetups, og vi vet derfor veldig godt hvor vanskelig det kan være å finne gode fasiliteter for å arrangere meetups. Ved å bruke Teknologihusets fasiliteter kan du slippe å betale eller leie dyre lokaler og du slipper ikke minst å føle deg tvunget til å bruke andres lokaler mot reklame av deres tjenester/produkter. Teknologihuset fortsetter å tjene Oslos community-grupper takket være våre fantastiske partnere. Lurer du på hvem de er? Sjekk hele listen <a href="#partnerlist">her</a>
+                        </p>
+                        <ActionList actions={
+                            [
+                                {
+                                    href: "/about",
+                                    label: "Les mer",
+                                    visible: true
+                                },
+
+                            ]
+                        } />
+                    </section>
+                </div>
+            </section>
+
             <section id="info-teknologihuset" className="wrapper style1 special">
                 <div className="inner">
                     <Header
                         size={2}
                         title={getText(
                             frontpageContent.frontpageMatrix.frontpage_content_matrix_header,
-                            "Rebel // Teknologihuset"
+                            "Teknologihuset"
                         )}
                     >
                         {getText(
                             frontpageContent.frontpageMatrix
                                 .frontpage_content_matrix_subheader,
-                            "Bli kjent med Teknologihuset på Rebel"
+                            "Bli kjent med Teknologihuset"
                         )}
                     </Header>
 
@@ -177,9 +201,9 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                 </div>
             </section>
 
-            <Partners partnerContent={frontpageContent.frontpagePartners} />
+            <Partners partnerContent={frontpageContent.frontpagePartners}/>
 
-            <section id="community-info" className="wrapper style3 special">
+            <section id="community-info1" className="wrapper style1 special">
                 <div className="inner">
                     <Header
                         title={getText(
@@ -187,11 +211,29 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                             "Communities"
                         )}
                     >
-                        {getText(
-                            frontpageContent.frontpageSpotlight.frontpage_spotlight_text,
-                            "Lorem Ipsum"
-                        )}
                     </Header>
+
+                    <Spotlight
+                        imgAlign={"right"}
+                    >
+                        <SpotlightImage
+                            imgSrc={"/images/nickt_meetup.jpeg"}
+                        />
+                        <Content
+                            actions={getMatrixElementButtonArray(
+                                frontpageContent,
+                                "element2"
+                            )}
+                        >
+                            <Header
+                                size={3}
+                                title={getText(
+                                    frontpageContent.frontpageSpotlight.frontpage_spotlight_text,
+                                    "Lorem Ipsum"
+                                )}
+                            />
+                        </Content>
+                    </Spotlight>
                     {frontpageContent.frontpageSpotlight.frontpage_spotlight_btn_visibility &&
                         <footer>
                             <ul className="actions special">
@@ -227,10 +269,10 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                             )}</h3>
                         </header>
                         <p>
-                        {getText(
-                            frontpageContent.frontpageContact.frontpage_contact_text,
-                            "Lorem Ipsum"
-                        )}
+                            {getText(
+                                frontpageContent.frontpageContact.frontpage_contact_text,
+                                "Lorem Ipsum"
+                            )}
                         </p>
                         <ul className="icons">
                             <li>
@@ -282,7 +324,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                   />
                                 </div>
                             </div>
-                            <div className="g-recaptcha" data-sitekey="6LetcFEkAAAAAByjiXF3YhUcgWv2Wzu3uikbN-v-" />
+                            <div className="g-recaptcha" data-sitekey="6LetcFEkAAAAAByjiXF3YhUcgWv2Wzu3uikbN-v-"/>
                             <ul className="actions">
                                 <li>
                                     <input type="submit" value="Send melding"/>
@@ -291,9 +333,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                         </form>
                     </section>
                 </div>
-                <div className="copyright">
-                    <p>&copy; Teknologihuset 2022. All rights reserved.</p>
-                </div>
+                <Copyright/>
             </section>
         </div>
     );

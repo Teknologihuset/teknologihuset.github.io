@@ -1,21 +1,24 @@
 import React from "react";
 
 export interface HeaderProps {
-    size?: 1 | 2 | 3 | 4 | 5 | 6
-    title?: string | React.ReactNode
-    children?: React.ReactNode
+    size?: 1 | 2 | 3 | 4 | 5 | 6;
+    title?: string | React.ReactNode;
+    children?: React.ReactNode;
 }
 
-const Header: React.FC<HeaderProps> = (props) => makeHeader(props)
+const Header: React.FC<HeaderProps> = ({ size = 2, title = "", children }: HeaderProps) => makeHeader({ size, title, children });
 
 Header.displayName = 'HeaderProps'
-Header.defaultProps = { size: 2, title: ""}
 
 function makeHeader(props: HeaderProps): JSX.Element {
-    return <header>
-        {getHeader(props)}
-        <p>{props.children}</p>
-    </header>
+    return (
+        <header>
+            {getHeader(props)}
+            {
+                !!props.children && props.children
+            }
+        </header>
+    );
 }
 
 function getHeader(props: HeaderProps) {
