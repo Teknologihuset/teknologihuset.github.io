@@ -1,6 +1,6 @@
 import React from "react";
 import {Props} from "../index";
-import {Action} from "../../components/content/ActionList";
+import CodeOfConductCredit from "../../components/copyright/CodeOfConductCredit";
 
 type CoCProps = {
     children: React.ReactNode;
@@ -82,6 +82,7 @@ export default function (props: Props) {
                         som disponeres av Teknologihuset via avtalen med Rebel.
                     </CoC>
                 </section>
+                <CodeOfConductCredit />
             </div>
         </section>
 
