@@ -32,12 +32,6 @@ export default function (props: Props) {
                         <strong>Den korte versjonen</strong>
                     </CoC>
                     <CoC>
-                        Teknologihuset skal være en åpen, inkluderende, mangfoldig og trygg arena for kunnskapsdeling.
-                        Teknologihuset skal ikke brukes i forbindelse med kommersielle arrangementer eller events som
-                        fremmer salg eller profitt for enkeltaktører. Alle typer mennesker er og skal være velkommen og
-                        trygge uavhengig av bakgrunn.
-                    </CoC>
-                    <CoC>
                         Teknologihuset er dedikert til å tilby en trakasseringsfri opplevelse for alle, uavhengig av
                         bakgrunn, kjønn, seksuell orientering, funksjonshemming, fysisk utseende, kroppsstørrelse, rase
                         eller religion. Vi tolererer ikke trakassering av deltakere i noen som helst form. Seksualisert
@@ -46,8 +40,7 @@ export default function (props: Props) {
                         på Teknologihuset).
                     </CoC>
                     <CoC>
-                        Deltakere som bryter disse reglene blir utvist og/eller sanksjonert fra Teknologihusets
-                        fasiliteter.
+                        Deltakere og arrangører som bryter reglene blir utvist fra Teknologihusets fasiliteter.
                     </CoC>
                     <CoC>
                         <strong>Den lange versjonen</strong>
@@ -62,8 +55,8 @@ export default function (props: Props) {
                         Arrangører, foredragsholdere, frivillige og sponsorer er også underlagt de etiske retningslinjene. Det skal ikke brukes seksualiserte bilder, aktiviteter eller annet materiale. Frivillige, standpersonell, arrangører og sponsorer skal ikke bruke seksualiserte klær, uniformer eller kostymer, eller på annen måte skape en seksualisert atmosfære på Teknologihusets fasiliteter.
                     </CoC>
                     <CoC>
-                        1. Arrangører skal overholde og håndheve de etiske retningslinjene. Arrangører er ansvarlig for å
-                        påse at alle deltakere på ditt arrangement er trygge. Det skal ikke aksepteres trakassering, mobbing, eller noen annen form for skadelig oppførsel som skader eller gjør andre deltakere, sponsorer, arrangører eller andre utrygge.
+                        1. Arrangører representerer sine communities/grupper og skal overholde de etiske retningslinjene. Arrangører er ansvarlig for å
+                        påse at alle deltakere på deres arrangementer er trygge. Det aksepteres ikke trakassering, mobbing, eller noen annen form for skadelig oppførsel som skader eller gjør andre deltakere, sponsorer eller arrangører utrygge. Hvis en arrangører eller et community bryter de etiske retningslinjene, kan Teknologihuset fritt velge en handling som er passende, inkludert utestegnelse fra Rebels fasiliteter på bakgrunn av Teknologihusets avtale med Rebel.
                     </CoC>
                     <CoC>
                         2. Deltakere forventes å følge de etiske retningslinjene og ikke trakassere, mobbe, latterliggjøre eller utvise negativ oppførsel som skader eller gjør andre deltakere, arrangører, sponsorer og andre utrygge. Vi forventer at alle deltakere følger reglene på alle Teknologihusets arrangementer og i alle av Teknologihusets fasiliteter inkludert møterom og saler.
@@ -72,14 +65,13 @@ export default function (props: Props) {
                         <strong>Hva du skal gjøre om du blir utsatt for eller blir vitne til trakassering:</strong>
                     </CoC>
                     <CoC>
-                        3. Hvis du blir trakassert, legger merke til at noen andre blir trakassert, eller har andre bekymringer, vennligst kontakt en arrangørene umiddelbart. Når dette ikke er mulig ta kontakt med Teknologihusets vert. En vert vil være tilstede på dagen og på kvelden når det arrangeres events.
+                        Hvis du blir trakassert, legger merke til at noen andre blir trakassert, eller har andre bekymringer, vennligst kontakt arrangørene eller Teknologihusets vert umiddelbart. Våre verter er tilstede på dagen og på kvelden når det arrangeres events.
                     </CoC>
                     <CoC>
-                        Teknologihuset hjelper gjerne deltakere med å kontakte sikkerhetspersonell eller politi, gi følge eller på annen måte bistå de som opplever trakassering for å føle seg trygge på Teknologihuset. Vi verdsetter din deltakelse.
+                        Teknologihuset hjelper gjerne deltakere med å kontakte sikkerhetsvakter eller politi, gi følge eller på annen måte bistå de som opplever trakassering for å føle seg trygge på Teknologihuset.
                     </CoC>
                     <CoC>
-                        Retningslinjene beskrevet i denne Code of Conduct'en gjelder alle events som kjøres i lokalene
-                        som disponeres av Teknologihuset via avtalen med Rebel.
+                        Retningslinjene gjelder alle events som kjøres i lokalene som disponeres av Teknologihuset via avtalen med Rebel.
                     </CoC>
                 </section>
                 <CodeOfConductCredit />
