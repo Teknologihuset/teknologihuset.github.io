@@ -12,8 +12,8 @@ const MenuNavbar = ({ visible, onClose }: Props) => {
           <li>
             <a href="/">Hjem</a>
           </li>
-            <li onClick={onClose}>
-            <a href="#kontaktskjema">Kontakt oss</a>
+          <li onClick={onClose}>
+            <a href="/#kontaktskjema">Kontakt oss</a>
           </li>
           {/*<li> todo: disse skal erstattes av meny-config i sanity
             <a href="/generic.html">Ipsum veroeros</a>

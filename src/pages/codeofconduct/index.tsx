@@ -65,7 +65,8 @@ export default function (props: Props) {
                         <strong>Hva du skal gjøre om du blir utsatt for eller blir vitne til trakassering:</strong>
                     </CoC>
                     <CoC>
-                        Hvis du blir trakassert, legger merke til at noen andre blir trakassert, eller har andre bekymringer, vennligst kontakt arrangørene eller Teknologihusets vert umiddelbart. Våre verter er tilstede på dagen og på kvelden når det arrangeres events.
+                        Hvis du blir trakassert, legger merke til at noen andre blir trakassert, eller har andre bekymringer, vennligst kontakt Teknologihuset umiddelbart. Våre verter er tilstede på dagen og på kvelden når det arrangeres events. Du finner også et <a
+                        href="/#kontaktskjema">kontaktskjema</a> på vår nettside.
                     </CoC>
                     <CoC>
                         Teknologihuset hjelper gjerne deltakere med å kontakte sikkerhetsvakter eller politi, gi følge eller på annen måte bistå de som opplever trakassering for å føle seg trygge på Teknologihuset.
