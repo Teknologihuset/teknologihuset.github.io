@@ -24,7 +24,7 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
         <div id="wrapper">
             <Banner bannerContent={bannerContent}/>
 
-            <section className="wrapper style1 align-center">
+            <section  id="about_th" className="wrapper thinwrapper style1 align-center">
                 <div className="inner align-left">
                     <section>
                         <h3>
@@ -302,35 +302,57 @@ function FrontPage({pageContent: frontpageContent, bannerContent}: Props) {
                         </ul>
                     </section>
                     <section id="kontaktskjema">
-                        <form method="post" action="https://formspree.io/f/xvoyrvwp">
+                        <form id="th_kontaktskjema" method="post" action="https://formspree.io/f/xvoyrvwp">
                             <div className="fields">
+                                <div className="field">
+                                    <select
+                                        required={true}
+                                        name="category" id="category" style={{color: "#56565695"}}>
+                                        <option value="">Velg en kategori</option>
+                                        <option value="moterom">Reservere et møterom</option>
+                                        <option value="motesal">Reservere en møtesal (meetups/events)</option>
+                                        <option value="partner">Partner/Sponsoring</option>
+                                        <option value="etisk_coc">Etiske retningslinjer</option>
+                                    </select>
+                                </div>
                                 <div className="field half">
-                                    <input type="text" name="name" id="name" placeholder="Navn"/>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        required={true}
+                                        id="name"
+                                        placeholder="Navn"/>
                                 </div>
                                 <div className="field half">
                                     <input
                                         type="email"
                                         name="email"
                                         id="email"
+                                        required={true}
                                         placeholder="E-post"
                                     />
                                 </div>
                                 <div className="field">
-                  <textarea
-                      name="message"
-                      id="message"
-                      placeholder="Melding"
-                      rows={4}
-                  />
+                                  <textarea
+                                      name="message"
+                                      id="message"
+                                      required={true}
+                                      placeholder="Melding"
+                                      rows={4}
+                                  />
+                                </div>
+                                <div className="field">
+                                    <div id="g-recaptcha" className="g-recaptcha"
+                                         data-sitekey="6LceSiQqAAAAAEjmukfSyqKW9gBOSqJFPE2EQK0e"></div>
                                 </div>
                             </div>
-                            <div className="g-recaptcha" data-sitekey="6LetcFEkAAAAAByjiXF3YhUcgWv2Wzu3uikbN-v-"/>
                             <ul className="actions">
                                 <li>
                                     <input type="submit" value="Send melding"/>
                                 </li>
                             </ul>
                         </form>
+                        <script src="/assets/js/form.js"></script>
                     </section>
                 </div>
                 <Copyright/>
